@@ -33,7 +33,9 @@ source .venv/bin/activate  # On Mac/Linux
 pip install -r requirements.txt
 
 # Run the test suite
-python -m pytest tests/
+chmod +x run-tests.sh
+./run-tests.sh
 
 # Launch the Streamlit application
-streamlit run app.py
+chmod +x run-locally.sh
+./run-locally.sh
