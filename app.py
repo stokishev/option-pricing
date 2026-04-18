@@ -13,14 +13,14 @@ from models.monte_carlo import MonteCarlo
 from models.binomial_tree import BinomialTree
 
 # Configuration
-st.set_page_config(page_title="Derivates Structuring", layout="wide", page_icon="📈")
+st.set_page_config(page_title="Derivatives Structuring", layout="wide", page_icon="📈")
 
 @st.cache_data(ttl=300)
 def load_market_data(ticker):
     return DataFetcher.get_market_data(ticker)
 
 # Sidebar
-st.sidebar.title("Derivates Structuring")
+st.sidebar.title("Derivatives Structuring")
 
 ticker_input = st.sidebar.text_input("Underlying Ticker", value="AAPL").upper()
 market_data = load_market_data(ticker_input)
